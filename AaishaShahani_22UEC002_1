@@ -11,7 +11,7 @@ mysql> select* from product;
 |        104 | Keyboard     | Electronics |      20.00 |
 |        105 | Mouse        | Electronics |      15.00 |
 +------------+--------------+-------------+------------+
-mysql> 5 rows in set (0.01 sec)
+5 rows in set (0.01 sec)
 
 2. Retrieve the product_name and unit_price from the Products table.
 
@@ -25,7 +25,7 @@ mysql> select product_id, unit_price from product;
 |        104 |      20.00 |
 |        105 |      15.00 |
 +------------+------------+
-mysql> 5 rows in set (0.00 sec)
+5 rows in set (0.00 sec)
 
 3. Filter the Products table to show only products in the &#39;Electronics&#39; category.
 
@@ -39,7 +39,7 @@ mysql> select* from product where category='Electronics';
 |        104 | Keyboard     | Electronics |      20.00 |
 |        105 | Mouse        | Electronics |      15.00 |
 +------------+--------------+-------------+------------+
-mysql> 5 rows in set (0.00 sec)
+5 rows in set (0.00 sec)
 
 4. Retrieve the product_id and product_name from the Products table for products with aunit_price greater than $100.
 
@@ -50,7 +50,7 @@ mysql> select product_id, product_name from product where unit_price>100;
 |        101 | Laptop       |
 |        102 | Smartphone   |
 +------------+--------------+
-mysql> 2 rows in set (0.00 sec)
+2 rows in set (0.00 sec)
 
 5. Calculate the average unit_price of products in the Products table.
 
@@ -60,7 +60,7 @@ mysql> select avg(unit_price) as average_price from product;
 +---------------+
 |    173.000000 |
 +---------------+
-mysql> 1 row in set (0.01 sec)
+1 row in set (0.01 sec)
 
 6. Retrieve product_name and unit_price from the Products table with the Highest Unit Price
 
@@ -70,7 +70,7 @@ mysql> select product_name, unit_price from product where unit_price=(select max
 +--------------+------------+
 | Laptop       |     500.00 |
 +--------------+------------+
-mysql> 1 row in set (0.01 sec)
+1 row in set (0.01 sec)
 
 7. Retrieve the product_name and unit_price from the Products table, ordering the results by unit_price in descending order.
 
@@ -84,7 +84,7 @@ mysql> select product_name, unit_price from product order by unit_price DESc;
 | Keyboard     |      20.00 |
 | Mouse        |      15.00 |
 +--------------+------------+
-mysql> 5 rows in set (0.01 sec)
+5 rows in set (0.01 sec)
 
 8. Retrieve the product_name and unit_price from the Products table, filtering the unit_price toshow only values between $20 and $600.
 
@@ -97,7 +97,7 @@ mysql> select product_name,unit_price from product where unit_price between 20 a
 | Headphones   |      30.00 |
 | Keyboard     |      20.00 |
 +--------------+------------+
-mysql> 4 rows in set (0.01 sec)
+4 rows in set (0.01 sec)
 
 9. Retrieve the product_name and category from the Products table, ordering the results bycategory in ascending order.
       
@@ -111,4 +111,4 @@ mysql> select product_name, category from product order by category asc;
 | Keyboard     | Electronics |
 | Mouse        | Electronics |
 +--------------+-------------+
-mysql> 5 rows in set (0.00 sec)
+5 rows in set (0.00 sec)
